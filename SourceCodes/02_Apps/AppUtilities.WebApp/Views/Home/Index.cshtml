@@ -1,0 +1,19 @@
+﻿@model Aliencube.AppUtilities.WebApp.Models.HomeIndexViewModel
+@{
+    ViewBag.Title = "Aliencube.AppUtilities";
+}
+
+<h2>Aliencube.AppUtilities.AppUtility.MapPath Test</h2>
+
+@using (Html.BeginForm(MVC.Home.ActionNames.Index, MVC.Home.Name, FormMethod.Post, new Dictionary<string, object>() { { "class", "form-inline"} }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Directory)
+        @Html.TextBoxFor(m => m.Directory, new Dictionary<string, object>() { { "class", "form-control" } })
+    </div>
+    <input class="btn btn-default" type="submit" name="Submit" />
+}
+
+<div class="well" style="margin-top: 10px;">
+    <p>Result: <strong>@Model.FullPath</strong></p>
+</div>
