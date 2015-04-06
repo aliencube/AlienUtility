@@ -3,6 +3,11 @@
 This provides various utilities that might be necessary for other developers.
 
 
+## Package Status ##
+
+* **Aliencube.AppUtilities** [![](https://img.shields.io/nuget/v/Aliencube.AppUtilities.svg)](https://www.nuget.org/packages/Aliencube.AppUtilities/) [![](https://img.shields.io/nuget/dt/Aliencube.AppUtilities.svg)](https://www.nuget.org/packages/Aliencube.AppUtilities/)
+
+
 ## `AppUtility` Class ##
 
 This class provides useful methods that can be used for both web apps and Windows apps.
