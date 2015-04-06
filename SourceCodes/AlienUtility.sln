@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4B07444B-9483-4075-B537-6B6892C48597}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00_Documents", "00_Documents", "{E9555E31-5124-4E43-B1E5-BAC46B0C73F1}"
 	ProjectSection(SolutionItems) = preProject
 		build.bat = build.bat
@@ -17,24 +22,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Configs", "01_Configs", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Apps", "02_Apps", "{EB7012B2-5581-43BD-A56F-FFFD3654E3DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities.ConsoleApp", "02_Apps\AppUtilities.ConsoleApp\AppUtilities.ConsoleApp.csproj", "{91BCF96F-A252-4960-99B0-3931E02B7E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities.WebApp", "02_Apps\AppUtilities.WebApp\AppUtilities.WebApp.csproj", "{0929C0C8-FEE1-4C2C-A0B8-642D81953418}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Services", "03_Services", "{D3DECC56-DBB9-4A8F-98D3-E3F4BE354F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities", "03_Services\AppUtilities\AppUtilities.csproj", "{8109C953-1F40-46A1-9099-F9DE09CF7C9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Models", "04_Models", "{2E24F107-2315-4043-A7D9-4863F6E91EC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99_Tests", "99_Tests", "{6CA2D692-C5CA-45A2-9C7E-016F05891CFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities", "03_Services\AppUtilities\AppUtilities.csproj", "{8109C953-1F40-46A1-9099-F9DE09CF7C9A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities.Tests", "99_Tests\AppUtilities.Tests\AppUtilities.Tests.csproj", "{C1242FD9-CBE7-449E-968A-6154155A4C54}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4B07444B-9483-4075-B537-6B6892C48597}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities.ConsoleApp", "02_Apps\AppUtilities.ConsoleApp\AppUtilities.ConsoleApp.csproj", "{91BCF96F-A252-4960-99B0-3931E02B7E72}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilities.WebApp", "02_Apps\AppUtilities.WebApp\AppUtilities.WebApp.csproj", "{0929C0C8-FEE1-4C2C-A0B8-642D81953418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,14 +42,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91BCF96F-A252-4960-99B0-3931E02B7E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91BCF96F-A252-4960-99B0-3931E02B7E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91BCF96F-A252-4960-99B0-3931E02B7E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,15 +50,23 @@ Global
 		{0929C0C8-FEE1-4C2C-A0B8-642D81953418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0929C0C8-FEE1-4C2C-A0B8-642D81953418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0929C0C8-FEE1-4C2C-A0B8-642D81953418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8109C953-1F40-46A1-9099-F9DE09CF7C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1242FD9-CBE7-449E-968A-6154155A4C54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{29B9CB3D-A13A-4EFB-BFE3-F3CF74BC45E6} = {E9555E31-5124-4E43-B1E5-BAC46B0C73F1}
-		{8109C953-1F40-46A1-9099-F9DE09CF7C9A} = {D3DECC56-DBB9-4A8F-98D3-E3F4BE354F54}
-		{C1242FD9-CBE7-449E-968A-6154155A4C54} = {6CA2D692-C5CA-45A2-9C7E-016F05891CFE}
 		{91BCF96F-A252-4960-99B0-3931E02B7E72} = {EB7012B2-5581-43BD-A56F-FFFD3654E3DE}
 		{0929C0C8-FEE1-4C2C-A0B8-642D81953418} = {EB7012B2-5581-43BD-A56F-FFFD3654E3DE}
+		{8109C953-1F40-46A1-9099-F9DE09CF7C9A} = {D3DECC56-DBB9-4A8F-98D3-E3F4BE354F54}
+		{C1242FD9-CBE7-449E-968A-6154155A4C54} = {6CA2D692-C5CA-45A2-9C7E-016F05891CFE}
 	EndGlobalSection
 EndGlobal
