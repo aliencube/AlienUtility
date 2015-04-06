@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>Aliencube.AppUtilities</id>
+        <version>0.5.0.0</version>
+        <title>Aliencube.AppUtilities</title>
+        <authors>Aliencube Community</authors>
+        <owners>aliencube</owners>
+        <licenseUrl>https://github.com/aliencube/AlienUtility/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/aliencube/AlienUtility</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Aliencube.AppUtilities provides various utilities that might be necessary for other developers.</description>
+        <copyright>Aliencube Community Copyright 2015</copyright>
+        <tags>Aliencube, AlienUtility, AppUtilities</tags>
+        <dependencies />
+    </metadata>
+    <files>
+        <file src="bin\Release\**\Aliencube.AppUtilities.*" target="lib" />
+    </files>
+</package>
